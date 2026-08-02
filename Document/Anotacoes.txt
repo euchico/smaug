@@ -1,0 +1,19 @@
+# Anotações
+
+## Referências 
+
+### Estrutura de Páginas
+
+https://www.megaloterias.com.br/loterias
+https://www.sorteonline.com.br/mega-sena
+https://www.intersena.com.br/megasena/escolha-seus-numeros
+
+
+### Arquitetura de Software
+
+- https://github.com/jasontaylordev/CleanArchitecture/tree/main/src
+- https://github.com/rafaelfgx/Architecture/tree/main/source
+- https://github.com/jasontaylordev/NorthwindTraders/tree/master/Src
+- https://github.com/dotnet-architecture/eShopOnWeb/tree/main/src
+
+- https://github.com/macoratti/CleanArchitecture1

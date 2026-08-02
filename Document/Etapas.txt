@@ -1,0 +1,51 @@
+# Etapas de Desenvolvimento
+
+01. Criar repositório no git/github
+
+02. Criar as pastas na raiz do projeto:
+  - Document
+  - Source
+
+03. Criar os documentos na raiz do projeto:
+  - .gitignore
+  - License
+  - Readme.md
+
+04. Criar solução ".NET" na raiz do projeto:
+  > dotnet new sln -n {NOME DO PROJETO} --format sln
+
+05. Criar diretórios:
+  > mkdir Application
+  > mkdir Domain
+  > mkdir Infrastructure
+  > mkdir Web
+
+06. Criar projetos:
+  > dotnet new classlib -n Domain -o Source/Domain --framework net10.0
+  > dotnet new classlib -n Application -o Source/Application --framework net10.0
+  > dotnet new classlib -n Infrastructure -o Source/Infrastructure --framework net10.0
+  > dotnet new webapi -n Web -o Source/Web --framework net10.0 --use-controllers
+
+07. Adicionar os projetos na solution:
+  > dotnet sln {NOME DO PROJETO}.sln add Source/Domain/Domain.csproj
+  > dotnet sln {NOME DO PROJETO}.sln add Source/Application/Application.csproj
+  > dotnet sln {NOME DO PROJETO}.sln add Source/Infrastructure/Infrastructure.csproj
+  > dotnet sln {NOME DO PROJETO}.sln add Source/Web/Web.csproj
+
+08. Configuração de referências:
+  > dotnet add Source/Application/Application.csproj reference Source/Domain/Domain.csproj
+
+  > dotnet add Source/Infrastructure/Infrastructure.csproj reference Source/Domain/Domain.csproj
+  > dotnet add Source/Infrastructure/Infrastructure.csproj reference Source/Application/Application.csproj
+
+  > dotnet add Source/Web/Web.csproj reference Source/Application/Application.csproj
+  > dotnet add Source/Web/Web.csproj reference Source/Infrastructure/Infrastructure.csproj
+
+09. Excluir arquivos:
+  - WeatherForecastController.cs
+  - WeatherForecast.cs
+
+10. Compilar para testar estado do projeto:
+  > dotnet build
+
+  
